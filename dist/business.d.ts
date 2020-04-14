@@ -22,7 +22,7 @@ export declare class Business {
     description: string;
     appconfig: Appconfig;
     contact: Contact;
-    orderPreparationTime: string;
+    orderPreparationTime: number;
     orderAheadConfigs: Array<Keyvalue>;
     pickUpHours: Array<OpenHours>;
     deliveryHours: Array<OpenHours>;
@@ -31,4 +31,9 @@ export declare class Business {
     deliveryLocation: Array<DeliveryLocation>;
     apkUrl: string;
     paypalSecret: string;
+    businessImages: Array<String>;
+    notificationToken: Array<String>;
+    notifications: Array<String>;
+    businessNotification: Array<String>;
+    appId: string;
 }

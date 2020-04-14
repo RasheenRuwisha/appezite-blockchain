@@ -4,4 +4,6 @@ export declare class BusinessUserReq {
     businessId: string;
     name: string;
     status: string;
+    phone: string;
+    notToken: string;
 }

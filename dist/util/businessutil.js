@@ -1,8 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const business_1 = require("./..//business");
-const appconfig_1 = require("./../appconfig");
-const theme_1 = require("./../theme");
 const category_1 = require("./../category");
 class BusinessUtil {
     /*
@@ -31,14 +29,7 @@ class BusinessUtil {
         business.country = country;
         return business;
     }
-    generateBusinessThemeObject(business, background, starterScreen, logo, lightColor, darkColor) {
-        const appconfig = new appconfig_1.Appconfig();
-        appconfig.backgroundImage = background;
-        appconfig.logo = logo;
-        appconfig.starterScreen = starterScreen;
-        const theme = new theme_1.Theme();
-        theme.dark = darkColor;
-        theme.light = lightColor;
+    generateBusinessThemeObject(business, appconfig, theme) {
         business.appconfig = appconfig;
         business.theme = theme;
         return business;

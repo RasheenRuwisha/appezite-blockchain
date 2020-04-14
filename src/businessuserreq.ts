@@ -4,4 +4,6 @@ export class BusinessUserReq {
     public businessId: string;
     public name: string;
     public status:string;
+    public phone:string
+    public notToken: string
 }

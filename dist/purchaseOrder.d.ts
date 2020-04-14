@@ -14,4 +14,8 @@ export declare class PurchaseOrder {
     deliveryAddress: string;
     customerName: string;
     platform: string;
+    total: string;
+    customerNumber: string;
+    deliveryCharge: number;
+    notificationTokens: Array<String>;
 }

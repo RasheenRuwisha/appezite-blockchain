@@ -5,20 +5,21 @@ export declare class BusinessContract extends Contract {
     queryAllBusinesses(ctx: Context): Promise<string>;
     queryUser(ctx: Context, username: string): Promise<string>;
     queryBusiness(ctx: Context, businessNumber: string): Promise<string>;
-    updateBusinessTheme(ctx: Context, businessNumber: string, background: string, logo: string, starterScreen: string, darkColor: string, lightColor: string): Promise<void>;
+    updateBusinessTheme(ctx: Context, businessNumber: string, appconfig: string, theme: string): Promise<void>;
     updateBusiness(ctx: Context, businessId: string, email: string, businessDetails: string): Promise<string>;
     updatePickupHours(ctx: Context, businessId: string, openHours: any): Promise<string>;
-    updatePreparationTime(ctx: Context, businessId: string, preparationTime: string): Promise<string>;
+    updatePreparationTime(ctx: Context, businessId: string, preparationTime: number): Promise<string>;
     updateDeliveryStatus(ctx: Context, businessId: string): Promise<string>;
-    addCategories(ctx: Context, businessNumber: string, categoryNumber: string, categoryName: string, categoryImage: string): Promise<void>;
+    addCategories(ctx: Context, category: string): Promise<void>;
     getCategories(ctx: Context, categoryNumber: string): Promise<string>;
-    updateCategory(ctx: Context, businessNumber: string, categoryNumber: string, image: string, name: string): Promise<string>;
+    updateCategory(ctx: Context, category: string): Promise<string>;
     queryAllCategories(ctx: Context, businessNumber: string): Promise<string>;
-    addProduct(ctx: Context, businessNumber: string, product: string): Promise<string>;
+    addProduct(ctx: Context, product: string): Promise<string>;
     queryAllProducts(ctx: Context, businessNumber: string): Promise<string>;
     queryAllCategoryProducts(ctx: Context, businessNumber: string, categoryId: string): Promise<string>;
     getProduct(ctx: Context, productNumber: string): Promise<string>;
     removeProduct(ctx: Context, productNumber: string, businessNumber: string): Promise<void>;
+    removeCategory(ctx: Context, categoryNumber: string, businessNumber: string): Promise<void>;
     updateProduct(ctx: Context, businessNumber: string, product: string): Promise<string>;
     createBusinessUser(ctx: Context, businessUser: string): Promise<string>;
     getBusinessUser(ctx: Context, businessUser: string): Promise<string>;
@@ -28,5 +29,9 @@ export declare class BusinessContract extends Contract {
     getBusinessOrder(ctx: Context, businessId: string, startDate: string, endDate: string, status: any): Promise<string>;
     getCustomerOrder(ctx: Context, businessId: string, email: string): Promise<string>;
     updateOrderStatus(ctx: Context, businessId: string, status: string, orderId: string): Promise<string>;
-    addApkURL(ctx: Context, businessId: string, apkURL: string): Promise<string>;
+    addApkURL(ctx: Context, businessId: string, apkURL: string, appId: string): Promise<string>;
+    getOrder(ctx: Context, businessId: string, orderId: string): Promise<string>;
+    batchProductUpload(ctx: Context, businessId: String, products: string): Promise<string>;
+    getCategoryByName(ctx: Context, businessId: string, name: string): Promise<string>;
+    batchCategoryUpload(ctx: Context, businessId: String, categories: string): Promise<string>;
 }

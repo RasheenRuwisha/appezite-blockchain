@@ -15,5 +15,9 @@ export class PurchaseOrder{
     public deliveryAddress:string;
     public customerName:string;
     public platform:string;
+    public total:string;
+    public customerNumber: string;
+    public deliveryCharge: number;
+    public notificationTokens: Array<String>;
 }
 

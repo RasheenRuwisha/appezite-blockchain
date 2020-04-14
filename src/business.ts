@@ -25,7 +25,7 @@ export class Business {
     public description: string;
     public appconfig: Appconfig;
     public contact: Contact;
-    public orderPreparationTime: string;
+    public orderPreparationTime: number;
     public orderAheadConfigs: Array<Keyvalue>;
     public pickUpHours:Array<OpenHours>;
     public deliveryHours:Array<OpenHours>;
@@ -34,4 +34,9 @@ export class Business {
     public deliveryLocation : Array<DeliveryLocation>;
     public apkUrl: string;
     public paypalSecret: string;
+    public businessImages: Array<String>;
+    public notificationToken: Array<String>;
+    public notifications: Array<String>;
+    public businessNotification: Array<String>;
+    public appId: string;
 }

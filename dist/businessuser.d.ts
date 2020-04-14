@@ -4,4 +4,6 @@ export declare class BusinessUser {
     email: string;
     businessId: Array<String>;
     name: string;
+    phone: string;
+    notificationTokens: Array<String>;
 }

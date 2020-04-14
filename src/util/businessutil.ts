@@ -39,16 +39,7 @@ export class BusinessUtil {
         return business;
     }
 
-    public generateBusinessThemeObject(business,background,starterScreen,logo,lightColor,darkColor):Business{
-        const appconfig = new Appconfig();
-        appconfig.backgroundImage = background;
-        appconfig.logo = logo;
-        appconfig.starterScreen = starterScreen;
-
-        const theme = new Theme();
-        theme.dark = darkColor;
-        theme.light = lightColor;
-
+    public generateBusinessThemeObject(business,appconfig, theme):Business{
         business.appconfig = appconfig;
         business.theme = theme;
         return business;
@@ -65,7 +56,4 @@ export class BusinessUtil {
         return category;
     }
 
-
-
-    
 }
